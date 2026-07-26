@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevBoard</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.9/daisyui.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+   <style>
+    .poppins {
+        font-family: "Poppins", sans-serif;
+    }
+   </style>
+  </head>
+  <body class="bg-[#F4F7FF] poppins text-[#00303C]">
+    <section class="container mx-auto p-6">
+
+    <div class="flex justify-between items-center mb-6 p-4 bg-white rounded-lg shadow">
+        <div class="flex items-center space-x-2">
+            <img src="assets/logo.png" alt="">
+          <span class="text-4xl font-light">Dev<span class="font-bold ">Board</span></span>
+        </div>
+        <div>
+          <button id="backToDesk" class="mx-5 bg-blue-700 text-white p-3 rounded-xl font-bold cursor-pointer hover:scale-110 transition duration-200">
+           Back To Desk
+          </button>
+        </div>
+      </div>
+
+      <h1 class="text-4xl font-bold text-center mb-6">Blogs</h1>
+
+          <div class="container mx-auto">
+      <div class="bg-white rounded-3xl py-4 mt-5">
+        <div class="p-5">
+          <h1 class="text-xl font-semibold">
+            Question-1: What are the different ways to select an element in the
+            DOM?
+          </h1>
+        </div>
+        <div
+          class="w-full h-1 border-b border-dashed border-slate-300"
+        ></div>
+
+        <div class="p-4">
+          <p class="text-xl text-cyan-900">
+           document.getElementById(), document.getElementsByClassName(), document.getElementsByTagName(), document.querySelector(), document.querySelectorAll()
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl py-4 mt-5">
+        <div class="p-4">
+          <h1 class="text-2xl font-semibold">
+            Question-2: What is the difference between innerHTML, innerText, and
+            textContent?
+          </h1>
+        </div>
+        <div
+          class="w-full h-[1px] border-b border-dashed border-gray-300"
+        ></div>
+
+        <div class="p-4">
+          <p class="text-xl text-cyan-900">
+           innerHTML sets or gets HTML content, innerText handles visible text only, and textContent grabs all text, even hidden, without parsing HTML.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl py-4 mt-5">
+        <div class="p-4">
+          <h1 class="text-2xl font-semibold">
+            Question-3: What is event delegation in the DOM?
+          </h1>
+        </div>
+        <div
+          class="w-full h-[1px] border-b border-dashed border-gray-300"
+        ></div>
+
+        <div class="p-4">
+          <p class="text-xl text-cyan-900">
+            Event delegation is a technique in the DOM where a single event listener is attached to a parent element to handle events triggered by its child elements, leveraging event bubbling.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl py-4 mt-5">
+        <div class="p-4">
+          <h1 class="text-2xl font-semibold">
+            Question-4: What is event bubbling in the DOM?
+          </h1>
+        </div>
+        <div
+          class="w-full h-[1px] border-b border-dashed border-gray-300"
+        ></div>
+
+        <div class="p-4">
+          <p class="text-xl text-cyan-900">
+            Event bubbling is the process in the DOM where an event triggered on an element propagates upward through its parent elements in the hierarchy.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl py-4 mt-5">
+        <div class="p-4">
+          <h1 class="text-2xl font-semibold">
+            Question-5: How do you create, add, and remove elements using
+            JavaScript?
+          </h1>
+        </div>
+        <div
+          class="w-full h-[1px] border-b border-dashed border-gray-300"
+        ></div>
+
+        <div class="p-4">
+          <p class="text-xl text-cyan-900">
+            Create: const newElement = document.createElement('div');
+            Add: document.body.appendChild(newElement);
+            Remove: newElement.parentNode.removeChild(newElement);
+          </p>
+        </div>
+      </div>
+      </div>
+
+
+
+
+      <script>
+        document.getElementById("backToDesk").addEventListener("click", function () {
+        window.location.href = "./index.html";
+    });
+      </script>
+  </body>
