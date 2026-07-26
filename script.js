@@ -25,25 +25,27 @@ for(let button of buttons){
         let cardTitle = event.target.parentNode.parentNode.querySelector(".cardTitle").textContent;
         console.log(cardTitle);
         const activityHistory = document.getElementById("activityHistory");    //History section বের করছে।
-        let currentTimeHistory = new Data().toLocaleTimeString("en-US",{
-              hour: "2-digit",
-              minute: "2-digit",
-              second: "2-digit",
-              hour12: true,
-        });
+        let currentTimeHistory = new Date().toLocaleTimeString("en-US", {
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
+            hour12: true,
+         });
         const div = document.createElement("div");     // নতুন div তৈরি হচ্ছে।
-        div.innerHTML = `
-        <p class="text-gray-800 font-medium mt-5">You have completed the task ${cardTitle} at ${currentTimeHistory}</p>
-        `;     //নতুন div-এর ভিতরে You have completed... লেখা বসানো হচ্ছে।
+       div.innerHTML = `
+        <p class="text-gray-800 font-medium mt-5">
+        You have completed the task ${cardTitle} at ${currentTimeHistory}
+        </p>
+        `;    //নতুন div-এর ভিতরে You have completed... লেখা বসানো হচ্ছে।
         activityHistory.appendChild(div);    //History section-এর শেষে নতুন message যোগ হচ্ছে।
         clickCount++;
         if(clickCount === 6){     //যদি ৬টা task complete হয়
             window.alert("Congrates!!! You have completed all the current task");
             clickCount = 0;
         }
-         document.getElementById("clearHistory").addEventListener('click', function () {
-        document.getElementById("activityHistory").textContent = ''
-    })
+      document.getElementById("clearHistory").addEventListener("click", function () {
+    document.getElementById("activityHistory").innerHTML = "";
+});
 
     });
 }
